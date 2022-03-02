@@ -1,0 +1,33 @@
+//$ Constants
+$Colorsocialmediabuttons:  white;
+$Colorblog: #e17b77;
+$Colortwitter: #00aced;
+$Colorlinkedin:  #007bb6;
+$Colorfacebook: #3b5998;
+$Colorgithub: #333;
+
+//@ Mixins
+@mixin textstyleProfile {
+    color: white;
+    font-family: 'Georgia', Courier, monospace;
+    letter-spacing: 2px;
+}
+
+@mixin textstyleWebsite {
+    color: rgb(169, 178, 252);
+    font-family: 'Courier New', courier, monospace;
+}
+
+@mixin StyleButtons {
+    height: 75px;
+    width: 75px;
+    display: grid;
+    grid-template-columns: 1fr 430px 1fr;
+}
+
+@mixin StylehoverButtons {
+    cursor: grab;
+    visibility: visible;
+    transition: font-size 400ms ease-in;
+    font-size: 22px;
+}

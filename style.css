@@ -1,0 +1,306 @@
+/* Imports */
+/* Algemeen */
+body {
+  background-color: #c3cfe2;
+}
+
+.Onderdelen {
+  display: flex;
+  justify-content: center;
+}
+
+/* deel 1 */
+.Deel_1 {
+  padding-left: 100px;
+}
+
+.wrapperdeel1 {
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  margin-left: 85px;
+  border-radius: 25px;
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footer_testimonial {
+  background-color: #686de0;
+  height: 170px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  display: block;
+}
+
+.profile_picture {
+  height: 100px;
+  width: 100px;
+  border-radius: 360px;
+  border: 5px solid white;
+  left: 140px;
+  top: -60px;
+  position: relative;
+}
+
+.text {
+  font-family: sans-serif;
+  font-size: 18px;
+  padding: 50px 20px 50px 30px;
+  margin: 30px;
+  line-height: 40px;
+}
+
+.profile_name {
+  color: white;
+  font-family: "Georgia", Courier, monospace;
+  letter-spacing: 2px;
+  left: 130px;
+  top: -60px;
+  position: relative;
+}
+
+.profile_website {
+  color: #a9b2fc;
+  font-family: "Courier New", courier, monospace;
+  left: 110px;
+  top: -65px;
+  position: relative;
+}
+
+/* deel 2 */
+.wrapperdeel2 {
+  padding-left: 100px;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-top: 50px;
+  z-index: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-columns: "item1 item2 item3" "item4 item5 item6" "item7";
+}
+
+.grid-items {
+  width: 100%;
+  position: relative;
+}
+
+.item1 {
+  grid-area: "item1";
+}
+
+.item2 {
+  grid-area: "item2";
+}
+
+.item3 {
+  grid-area: "item3";
+}
+
+.item4 {
+  grid-area: "item4";
+}
+
+.item5 {
+  grid-area: "item5";
+}
+
+.item6 {
+  grid-area: "item6";
+}
+
+.item7 {
+  grid-area: "item7";
+}
+
+.grid-items img {
+  width: 90%;
+  height: auto;
+  margin: 10px;
+  z-index: 1;
+  border-radius: 2%;
+}
+
+.buttons {
+  top: 50%;
+  left: 50%;
+  font-size: 16px;
+  padding: 12px 24px;
+  z-index: -1;
+  position: absolute;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.grid-items img:hover {
+  opacity: 0.5;
+}
+
+.grid-items:hover .buttons {
+  z-index: 10;
+}
+
+@media (min-width: 1150px) {
+  .wrapperdeel2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1450px) {
+  .wrapperdeel2 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/* deel 3 */
+.social-media-container {
+  z-index: 10;
+  position: fixed;
+}
+
+.social-media-container img {
+  height: 75px;
+  width: 75px;
+  margin: 0;
+  align-content: center;
+  position: relative;
+  float: left;
+}
+
+.social-media-buttons {
+  color: white;
+  font-size: 20px;
+  text-decoration: underline;
+  border: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.blog {
+  grid-area: "blog";
+  background-color: #e17b77;
+  height: 75px;
+  width: 75px;
+  display: grid;
+  grid-template-columns: 1fr 430px 1fr;
+}
+
+.twitter {
+  grid-area: "twitter";
+  background-color: #00aced;
+  height: 75px;
+  width: 75px;
+  display: grid;
+  grid-template-columns: 1fr 430px 1fr;
+}
+
+.linkedin {
+  grid-area: "linkedin";
+  background-color: #007bb6;
+  height: 75px;
+  width: 75px;
+  display: grid;
+  grid-template-columns: 1fr 430px 1fr;
+}
+
+.facebook {
+  grid-area: "facebook";
+  background-color: #3b5998;
+  height: 75px;
+  width: 75px;
+  display: grid;
+  grid-template-columns: 1fr 430px 1fr;
+}
+
+.github {
+  grid-area: "github";
+  background-color: #333;
+  height: 75px;
+  width: 75px;
+  display: grid;
+  grid-template-columns: 1fr 430px 1fr;
+}
+
+.bl {
+  background-color: #e17b77;
+}
+
+.tw {
+  background-color: #00aced;
+}
+
+.li {
+  background-color: #007bb6;
+}
+
+.fb {
+  background-color: #3b5998;
+}
+
+.gh {
+  background-color: #333;
+}
+
+.social-media-container img:hover {
+  transform: rotate(10deg);
+}
+
+.blog:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.blog:hover .social-media-buttons {
+  cursor: -webkit-grab;
+  cursor: grab;
+  visibility: visible;
+  transition: font-size 400ms ease-in;
+  font-size: 22px;
+}
+
+.twitter:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.twitter:hover .social-media-buttons {
+  cursor: -webkit-grab;
+  cursor: grab;
+  visibility: visible;
+  transition: font-size 400ms ease-in;
+  font-size: 22px;
+}
+
+.linkedin:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.linkedin:hover .social-media-buttons {
+  cursor: -webkit-grab;
+  cursor: grab;
+  visibility: visible;
+  transition: font-size 400ms ease-in;
+  font-size: 22px;
+}
+
+.facebook:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.facebook:hover .social-media-buttons {
+  cursor: -webkit-grab;
+  cursor: grab;
+  visibility: visible;
+  transition: font-size 400ms ease-in;
+  font-size: 22px;
+}
+
+.github:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.github:hover .social-media-buttons {
+  cursor: -webkit-grab;
+  cursor: grab;
+  visibility: visible;
+  transition: font-size 400ms ease-in;
+  font-size: 22px;
+}/*# sourceMappingURL=style.css.map */

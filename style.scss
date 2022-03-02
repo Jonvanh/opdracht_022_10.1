@@ -1,0 +1,272 @@
+
+  /* Imports */
+@import './Constants';
+
+
+
+  /* Algemeen */
+  
+body {
+  background-color: #c3cfe2;    
+}
+
+.Onderdelen {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+  /* deel 1 */
+
+.Deel_1{
+  padding-left: 100px;
+}
+
+.wrapperdeel1 {
+  background-color: white; 
+  width: 400px;
+  height: 500px;
+  margin-left: 85px;
+  border-radius: 25px;
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footer_testimonial {
+  background-color:#686de0;
+  height: 170px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  display: block; 
+}
+
+.profile_picture {
+  height: 100px;
+  width: 100px;
+  border-radius: 360px;
+  border: 5px solid white;
+  left: 140px;
+  top: -60px;
+  position: relative; 
+}
+
+.text {
+  font-family: sans-serif;
+  font-size: 18px;
+  padding: 50px 20px 50px 30px;
+  margin: 30px; 
+  line-height: 40px;
+}
+
+.profile_name {
+  @include textstyleProfile;
+  left: 130px;
+  top: -60px;
+  position: relative;
+}
+
+.profile_website {
+  @include textstyleWebsite;
+  left: 110px;
+  top: -65px;
+  position: relative;
+}
+
+
+
+
+  /* deel 2 */
+
+.wrapperdeel2 { 
+  padding-left: 100px;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-top: 50px;
+  z-index: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-columns:  "item1 item2 item3"
+                          "item4 item5 item6"
+                          "item7"; 
+}
+
+.grid-items { 
+  width: 100%;
+  position: relative;
+}
+
+
+.item1 {
+  grid-area: "item1";
+}
+.item2 {
+  grid-area: "item2";
+}
+.item3 {
+  grid-area: "item3";   
+}
+.item4 {
+  grid-area: "item4";
+}
+.item5 {
+  grid-area: "item5";   
+}
+.item6 {
+  grid-area: "item6";
+}
+.item7 {
+  grid-area: "item7";   
+}
+
+.grid-items img {
+  width: 90%;
+  height: auto;
+  margin: 10px;
+  z-index: 1;
+  border-radius: 2%;    
+}
+
+.buttons { 
+  top: 50%;
+  left: 50%;
+  font-size: 16px;
+  padding: 12px 24px;
+  z-index: -1;
+  position: absolute;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.grid-items img:hover {
+  opacity: 0.5; 
+}
+
+.grid-items:hover {  
+  .buttons{
+    z-index: 10;
+  }
+}
+
+
+@media (min-width: 1150px) { 
+  .wrapperdeel2 { 
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1450px) {
+  .wrapperdeel2 { 
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+
+  /* deel 3 */
+
+.social-media-container {
+  z-index: 10;
+  position: fixed;
+}
+
+.social-media-container img {
+  height: 75px;
+  width: 75px;
+  margin: 0;
+  align-content: center;
+  position: relative;
+  float: left;
+}  
+
+.social-media-buttons {
+  color: $Colorsocialmediabuttons;
+  font-size: 20px;
+  text-decoration: underline;
+  border: 0;
+  visibility: hidden;
+  overflow: hidden; 
+}
+
+.blog {
+  grid-area: "blog";
+  background-color: $Colorblog;
+  @include StyleButtons;
+}
+.twitter {
+  grid-area: "twitter";
+  background-color: $Colortwitter;
+  @include StyleButtons;
+}
+.linkedin {
+  grid-area: "linkedin";
+  background-color: $Colorlinkedin;
+  @include StyleButtons;
+}
+.facebook {
+  grid-area: "facebook";
+  background-color: $Colorfacebook;
+  @include StyleButtons;
+}
+.github {
+  grid-area: "github";
+  background-color: $Colorgithub;
+  @include StyleButtons;
+}
+
+.bl {
+  background-color: $Colorblog;  
+}
+.tw { 
+  background-color: $Colortwitter;
+}
+.li {
+  background-color: $Colorlinkedin;
+}
+.fb {
+  background-color: $Colorfacebook;
+}
+.gh {
+  background-color: $Colorgithub;
+}
+
+
+.social-media-container img:hover {
+  transform: rotate(10deg);
+}
+
+.blog:hover {
+  cursor: grab;
+  .social-media-buttons{
+    @include StylehoverButtons
+  }
+}
+.twitter:hover {
+  cursor: grab;
+  .social-media-buttons {
+    @include StylehoverButtons
+  }
+}
+.linkedin:hover {
+  cursor: grab;
+  .social-media-buttons {
+    @include StylehoverButtons
+  }
+}
+.facebook:hover {
+  cursor: grab;
+  .social-media-buttons {
+    @include StylehoverButtons
+  }
+}
+.github:hover {
+  cursor: grab;
+  .social-media-buttons {
+    @include StylehoverButtons
+  }
+}
+
+
